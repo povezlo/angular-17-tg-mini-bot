@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   <h2>{{ title }}</h2>
   <h4>{{ subtitle }}</h4>
     @for (product of products; track product.id) {
-      <li class="product-item" [routerLink]="['/product', product.id]" routerLinkActive="router-link-active" >
+      <li class="product-item" [routerLink]="['/product', product.id]" >
           <div class="product-image">
             <img [src]="product.image" [alt]="product.title">
           </div>

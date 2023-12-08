@@ -32,6 +32,6 @@ export class ShopComponent implements OnInit {
   readonly products = inject(ProductsService);
 
   ngOnInit(): void {
-    this.telegram.MainButton?.show();
+    this.telegram.BackButton?.hide();
   }
 }

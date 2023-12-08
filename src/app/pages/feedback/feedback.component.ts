@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-feedback',
   standalone: true,
   imports: [],
-  template: ``,
+  template: `Feedback Page`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeedbackComponent {

@@ -28,7 +28,7 @@ function addDomainToLinkAndImage(product: IProduct) {
   }
 }
 
-export const products: IProduct[] = [
+export const PRODUCTS_LIST: IProduct[] = [
   {
     id: '29',
     title: 'Typescript',
@@ -150,10 +150,10 @@ export const products: IProduct[] = [
   providedIn: 'root'
 })
 export class ProductsService {
-  readonly products: IProduct[] = products.map(addDomainToLinkAndImage);
+  readonly products: IProduct[] = PRODUCTS_LIST.map(addDomainToLinkAndImage);
 
   getById(id: string): IProduct | null {
-    return products.find(product => product.id === id) || null;
+    return this.products.find(product => product.id === id) || null;
   }
 
   get byGroup(): ProductGroup {

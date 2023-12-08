@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TelegramService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,9 @@ import { RouterOutlet } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'angular-minibot';
+  telegram = inject(TelegramService);
+
+  constructor() {
+    this.telegram.ready();
+  }
 }
