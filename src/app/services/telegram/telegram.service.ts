@@ -33,4 +33,8 @@ export class TelegramService {
   ready(): void {
     this.telegram?.ready();
   }
+
+  sendData(data: Record<string, unknown>): void {
+    this.telegram?.sendData(JSON.stringify(data));
+  }
 }
